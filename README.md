@@ -1,11 +1,11 @@
-[![Release](https://img.shields.io/github/release/bcgsc/ntEdit.svg)](https://github.com/bcgsc/ntEdit/releases)
-[![Downloads](https://img.shields.io/github/downloads/bcgsc/ntEdit/total?logo=github)](https://github.com/bcgsc/ntEdit/releases/download/v1.4.3/ntEdit_v1-4-3.tar.gz)
+[![Release](https://img.shields.io/github/release/birollab/ntEdit.svg)](https://github.com/birollab/ntEdit/releases)
+[![Downloads](https://img.shields.io/github/downloads/birollab/ntEdit/total?logo=github)](https://github.com/birollab/ntEdit/releases/download/v1.4.3/ntEdit_v1-4-3.tar.gz)
 [![Conda](https://img.shields.io/conda/dn/bioconda/ntedit?label=Conda)](https://anaconda.org/bioconda/ntedit)
-[![Issues](https://img.shields.io/github/issues/bcgsc/ntEdit.svg)](https://github.com/bcgsc/ntEdit/issues)
+[![Issues](https://img.shields.io/github/issues/birollab/ntEdit.svg)](https://github.com/birollab/ntEdit/issues)
 [![link](https://img.shields.io/badge/ntEdit-manuscript-brightgreen)](http://dx.doi.org/10.1093/bioinformatics/btz400)
-Thank you for your [![Stars](https://img.shields.io/github/stars/bcgsc/ntEdit.svg)](https://github.com/bcgsc/ntEdit/stargazers)
+Thank you for your [![Stars](https://img.shields.io/github/stars/birollab/ntEdit.svg)](https://github.com/birollab/ntEdit/stargazers)
 
-![Logo](https://github.com/bcgsc/ntEdit/blob/master/ntedit-logo.png)
+![Logo](https://github.com/birollab/ntEdit/blob/master/ntedit-logo.png)
 
 # ntEdit
 
@@ -37,9 +37,9 @@ Thank you for your [![Stars](https://img.shields.io/github/stars/bcgsc/ntEdit.sv
 
 ntEdit is a fast and scalable genomics application for polishing genome sequence assembly drafts. 
 It simplifies polishing, variant detection and "haploidization" of gene and genome sequences with its re-usable Bloom filter design.
-Although it was originally designed as a general-purpose polishing tool, initally aimed at improving genome sequences by fixing base mismatches and frame shift errors with the help of more base-accurate short sequencing reads, ntEdit can also be used for polishing with long reads and to "finish" genome sequence assembly projects (refer to <a href="https://github.com/bcgsc/goldPolish" target="_blank">GoldPolish</a> and the <a href="https://github.com/bcgsc/ntedit_sealer_protocol" target="_blank">ntedit+sealer genome assembly finishing protocol</a>, respectively).
+Although it was originally designed as a general-purpose polishing tool, initally aimed at improving genome sequences by fixing base mismatches and frame shift errors with the help of more base-accurate short sequencing reads, ntEdit can also be used for polishing with long reads and to "finish" genome sequence assembly projects (refer to <a href="https://github.com/birollab/goldPolish" target="_blank">GoldPolish</a> and the <a href="https://github.com/birollab/ntedit_sealer_protocol" target="_blank">ntedit+sealer genome assembly finishing protocol</a>, respectively).
 
-We anticipate that ntEdit will find further applications in the rapid mapping of single nucleotide variants, as demonstrated below with the genome of SARS-CoV-2, the highly transmissible pathogenic coronavirus, and etiological agent of COVID-19. Additionally, for researchers delving into the intricate roots of genetic lineages within large cohort data, we encourage the utilization of <a href="https://github.com/bcgsc/ntroot" target="_blank">ntRoot, an ancestry prediction framework</a> built upon the ntEdit engine. It offers a comprehensive analysis of genetic heritage, employing sequence alignment-free algorithms to unveil ancestral connections and provide insights into genetic ancestry within diverse populations.
+We anticipate that ntEdit will find further applications in the rapid mapping of single nucleotide variants, as demonstrated below with the genome of SARS-CoV-2, the highly transmissible pathogenic coronavirus, and etiological agent of COVID-19. Additionally, for researchers delving into the intricate roots of genetic lineages within large cohort data, we encourage the utilization of <a href="https://github.com/birollab/ntroot" target="_blank">ntRoot, an ancestry prediction framework</a> built upon the ntEdit engine. It offers a comprehensive analysis of genetic heritage, employing sequence alignment-free algorithms to unveil ancestral connections and provide insights into genetic ancestry within diverse populations.
 
 ```diff
 ! NOTE: In v1.3.1 onwards, the parameter k is automatically detected from supplied Bloom filters
@@ -60,7 +60,7 @@ ntEdit v1.2.0 and subsequent versions are written in C++.
 
 Clone and enter the ntEdit directory.
 <pre>
-git clone https://github.com/bcgsc/ntEdit.git
+git clone https://github.com/birollab/ntEdit.git
 cd ntEdit
 </pre>
 Compile ntEdit.
@@ -73,12 +73,12 @@ ninja install
 
 ## Dependencies <a name=dependencies></a>
 
-1. ntStat (v1.0.0+, https://github.com/bcgsc/ntstat)
+1. ntStat (v1.0.0+, https://github.com/birollab/ntstat)
 2. BloomFilter utilities (provided in ./lib)
 3. kseq (provided in ./lib)
 4. [meson](https://mesonbuild.com/)
 5. [ninja](https://ninja-build.org/)
-6. [btllib](https://github.com/bcgsc/btllib)
+6. [btllib](https://github.com/birollab/btllib)
 7. [snakemake](https://snakemake.readthedocs.io/en/stable/)
 8. python 3.9+
 
@@ -95,13 +95,13 @@ conda install -c bioconda ntedit
 
 Refer to the README.md file on how to install and run ntEdit.
 Our [manuscript](http://dx.doi.org/10.1093/bioinformatics/btz400) contains information about the software and its performance.
-![ntEdit ISMB poster](https://github.com/bcgsc/ntEdit/blob/master/ntedit_ismb2019.png)
+![ntEdit ISMB poster](https://github.com/birollab/ntEdit/blob/master/ntedit_ismb2019.png)
 This ISMB2019 poster contains additional information, benchmarks and results. 
 
 
 ## Citing ntEdit <a name=citing></a>
 
-Thank you for your [![Stars](https://img.shields.io/github/stars/bcgsc/ntEdit.svg)](https://github.com/bcgsc/ntEdit/stargazers) and for using, developing and promoting this free software!
+Thank you for your [![Stars](https://img.shields.io/github/stars/birollab/ntEdit.svg)](https://github.com/birollab/ntEdit/stargazers) and for using, developing and promoting this free software!
 
 If you use ntEdit in your research, please cite:
 
@@ -229,7 +229,7 @@ run-ntedit polish --draft ecoliWithMismatches001Indels0001.fa --reads my_reads -
 
 ## Tips for running ntEdit
 - For more advanced users, please see the help documentation for the `ntedit` executable, which has information about additional options
-  - More information about the secondary Bloom filter mode is available on our [wiki page](https://github.com/bcgsc/ntEdit/wiki/ntEdit-Secondary-Bloom-filter)
+  - More information about the secondary Bloom filter mode is available on our [wiki page](https://github.com/birollab/ntEdit/wiki/ntEdit-Secondary-Bloom-filter)
 - `--solid mode` will work well ONLY if you have sufficient read coverage (>30X). Otherwise, set the kmer coverage threshold to --cutoff 2 (>=20X) or --cutoff 1 (<20X)
   - solid mode will output non-error kmers, as determined by ntCard. Use this option only when you don't wish to set the threshold (--cutoff) manually
 
@@ -251,7 +251,7 @@ Mode 2:
 
 
 ## ntEdit -a (soft mask) <a name=soft></a>
-See https://github.com/bcgsc/ntedit_sealer_protocol and https://github.com/bcgsc/goldrush-edit for genome polishing pipelines that make use of this mode
+See https://github.com/birollab/ntedit_sealer_protocol and https://github.com/birollab/goldrush-edit for genome polishing pipelines that make use of this mode
 
 <pre>
 Version 1.3.5 implements a new option (-a), which controls soft-masking (lower case) nucleotides in the supplied input [draft genome] sequence when its kmers are not found in the primary Bloom filter, and with no possible fix found in that filter (and optionally within a coverage slice provided by the secondary Bloom filter).  
@@ -347,7 +347,7 @@ ecoli_ntedit_k25_edited.fa
 
 ## Algorithm - how it works <a name=how></a>
 
-![Logo](https://github.com/bcgsc/ntEdit/blob/master/figS1.png)
+![Logo](https://github.com/birollab/ntEdit/blob/master/figS1.png)
 Sequence reads are first shredded into kmers using ntStat, keeping track of kmer multiplicity. The kmers that pass coverage thresholds (using ntStat, --cutoff option builds a filter with kmers having a coverage higher than cutoff) are used to construct a Bloom filter (BF). The draft assembly is supplied to ntEdit (--draft option, fasta file), along with the BF and sequences are read sequentially. Sequence strings are shredded into words of length k (kmers) at a specified value (-k option in versions before v1.3.1.  In newer releases, k is detected automatically from the main Bloom filter) matching that used to build the BF, and each kmer from 5’ to 3’ queries the BF data structure for presence/absence (step 1). When a kmer is not found in the filter, a subset (Sk) of overlapping k kmers (defined by k over three, k/3) containing the 3’-end base is queried for absence (step 2). The subset Sk, representing a subsampling of k kmers obtained by sliding over 3 bases at a time over k bases, is chosen to minimize the number of checks against the Bloom filter. Of this subset, when the number of absent (-) kmers matches or exceeds a threshold defined by Sk- >= k/x (-x option), representing the majority of kmers in Sk, editing takes place (step 3 and beyond), otherwise step 1 resumes. In the former case, the 3’-end base is permuted to one of the three alternate bases (step 3), and the subset (Sk_alt) containing the change is assessed for Bloom filter presence (+). When that number matches or exceeds the threshold defined by Sk_alt+ >= k/y (-y option), which means the base substitution qualifies, it is tracked along with the number of supported kmers and the remaining alternate 3’-end base substitutions are also assessed (ie. resuming step 3 until all bases inspected). If the edit does not qualify, then a cycle of base insertion(s) and deletion(s) of up to –i and –d bases begins (step 4, -i option and step 5, -d option, respectively). As is the case for the substitutions, a subset of k kmers containing the indel change is tested for presence. If there are no qualifying changes, then the next alternate 3’-end base is inspected as per above; otherwise the change is applied to the sequence string and the next assembly kmer is inspected (step 1). The process is repeated until a qualifying change or until no suitable edits are found. In the latter case, we go back to step 1. When a change is made, the position on the new sequence is tracked, along with an alternate base with lesser or equal k kmer subset support, when applicable. Currently, ntEdit only tracks cases when edits are made (steps 3-5), and does not flag unedited, missing draft kmers (steps 1-2).  
 
 
