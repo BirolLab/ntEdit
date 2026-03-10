@@ -251,7 +251,7 @@ Mode 2:
 
 
 ## ntEdit -a (soft mask) <a name=soft></a>
-See https://github.com/birollab/ntedit_sealer_protocol and https://github.com/birollab/goldrush-edit for genome polishing pipelines that make use of this mode
+See https://github.com/birollab/ntedit_sealer_protocol and https://github.com/BirolLab/goldpolish for genome polishing pipelines that make use of this mode
 
 <pre>
 Version 1.3.5 implements a new option (-a), which controls soft-masking (lower case) nucleotides in the supplied input [draft genome] sequence when its kmers are not found in the primary Bloom filter, and with no possible fix found in that filter (and optionally within a coverage slice provided by the secondary Bloom filter).  
