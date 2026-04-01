@@ -20,7 +20,7 @@ const unsigned NUM_BITS_PER_BYTE = 8;
 /*
 Return the genome size of the given fasta file
 */
-uint64_t find_genome_size(std::vector<std::string> genome_files, int threads) {
+uint64_t find_genome_size(const std::vector<std::string>& genome_files, int threads) {
   uint64_t genome_size = 0;
   for (const auto& genome_file : genome_files) {
     btllib::SeqReader reader(

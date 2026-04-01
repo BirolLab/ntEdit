@@ -559,7 +559,7 @@ str_to_upper(const std::string& str)
 
 /* Helper for filling out the LPS array for detecting a low complexity repeat. */
 void
-computeLPSArray(std::string possible_repeat, int n, std::vector<int>& lps)
+computeLPSArray(const std::string& possible_repeat, int n, std::vector<int>& lps)
 {
 	int len = 0;
 	int i;
@@ -810,7 +810,7 @@ makeDeletion(
 
 /* Returns the character at pos based on the seqNode structure. */
 unsigned char
-getCharacter(unsigned& pos, seqNode node, const std::string& contigSeq)
+getCharacter(unsigned& pos, const seqNode& node, const std::string& contigSeq)
 {
 	if (node.node_type == 0) {
 		return contigSeq.at(pos);
