@@ -1,5 +1,5 @@
 [![Release](https://img.shields.io/github/release/birollab/ntEdit.svg)](https://github.com/birollab/ntEdit/releases)
-[![Downloads](https://img.shields.io/github/downloads/birollab/ntEdit/total?logo=github)](https://github.com/birollab/ntEdit/releases/download/v1.4.3/ntEdit_v1-4-3.tar.gz)
+[![Downloads](https://img.shields.io/github/downloads/birollab/ntEdit/total?logo=github?dummy=30)](https://github.com/birollab/ntEdit/releases/download/v1.4.3/ntEdit_v1-4-3.tar.gz)
 [![Conda](https://img.shields.io/conda/dn/bioconda/ntedit?label=Conda)](https://anaconda.org/bioconda/ntedit)
 [![Issues](https://img.shields.io/github/issues/birollab/ntEdit.svg)](https://github.com/birollab/ntEdit/issues)
 [![link](https://img.shields.io/badge/ntEdit-manuscript-brightgreen)](http://dx.doi.org/10.1093/bioinformatics/btz400)
