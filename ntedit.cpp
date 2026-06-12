@@ -1049,12 +1049,12 @@ writeEditsToFile(
 				if (snv_mode_no_edit) {
 					rfout << "\n";
 				}
-				unsigned curr_best_alt_supp = 0;
-				char best_alt_base = '1';
 				std::string best_alt_supp;
 				std::string genotype;
 				// If there are alt bases
 				if (!alt_base_vcf.empty()) {
+					unsigned curr_best_alt_supp = 0;
+					char best_alt_base = '1';
 					if (opt::snv) {
 						if (!snv_mode_no_edit) {
 							for (size_t i = 0; i < alt_base_vcf.size(); ++i) {
@@ -1567,12 +1567,6 @@ tryIndels(
 {
 
 	// initialize temporary values
-	uint64_t temp_fhVal;
-	uint64_t temp_rhVal;
-	unsigned temp_h_seq_i;
-	unsigned temp_t_seq_i;
-	unsigned temp_h_node_index;
-	unsigned temp_t_node_index;
 	unsigned temp_best_num_support = 0;
 	unsigned temp_alt_num_support = 0;
 	std::string temp_best_indel;
@@ -1588,12 +1582,12 @@ tryIndels(
 		insertion_bases += draft_char;
 
 		// set temporary values
-		temp_fhVal = fhVal;
-		temp_rhVal = rhVal;
-		temp_h_seq_i = h_seq_i;
-		temp_t_seq_i = t_seq_i;
-		temp_h_node_index = h_node_index;
-		temp_t_node_index = t_node_index;
+		uint64_t temp_fhVal = fhVal;
+		uint64_t temp_rhVal = rhVal;
+		unsigned temp_h_seq_i = h_seq_i;
+		unsigned temp_t_seq_i = t_seq_i;
+		unsigned temp_h_node_index = h_node_index;
+		unsigned temp_t_node_index = t_node_index;
 
 		// change the last base
 		NTMC64_changelast(draft_char, index_char, opt::k, opt::h, temp_fhVal, temp_rhVal, hVal);
@@ -2520,7 +2514,6 @@ main(int argc, char** argv) // NOLINT
 	}
 
 	// VCF file reading RLW 19AUG2023
-	std::string line;
 	std::map<std::string, std::string> clinvar;
 
 	// check the vcf file is specified
@@ -2528,7 +2521,7 @@ main(int argc, char** argv) // NOLINT
 		// if the file is specified check that it is readable
 		assert_readable(opt::vcf_filename);
 		// read file handle
-
+		std::string line;
 		// check if vcf is gzipped
 		if (opt::vcf_filename.substr(opt::vcf_filename.find_last_of(".") + 1) == "gz") {
 			std::ifstream myfile(opt::vcf_filename, std::ios_base::in | std::ios_base::binary);
